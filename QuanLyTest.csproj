@@ -1,0 +1,301 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D7159481-E8E6-4651-9B0B-1E728A29B441}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>QuanLyTest</RootNamespace>
+    <AssemblyName>QuanLyTest</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BILL.cs">
+      <DependentUpon>PhongTroDataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CUSTOMER.cs">
+      <DependentUpon>PhongTroDataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="deleteForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="deleteForm.Designer.cs">
+      <DependentUpon>deleteForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="guestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="guestForm.Designer.cs">
+      <DependentUpon>guestForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="guestOpenForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="guestOpenForm.Designer.cs">
+      <DependentUpon>guestOpenForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MOTELROOM.cs">
+      <DependentUpon>PhongTroDataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PARTICULARSERVICE.cs">
+      <DependentUpon>PhongTroDataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="passOpenForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="passOpenForm.Designer.cs">
+      <DependentUpon>passOpenForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PhongTroDataBase.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PhongTroDataBase.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PhongTroDataBase.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PhongTroDataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PhongTroDataBase.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PhongTroDataBase.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="rangeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="rangeForm.Designer.cs">
+      <DependentUpon>rangeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="rankForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="rankForm.Designer.cs">
+      <DependentUpon>rankForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="rankOpenForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="rankOpenForm.Designer.cs">
+      <DependentUpon>rankOpenForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REINTINFOR.cs">
+      <DependentUpon>PhongTroDataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ROLE.cs">
+      <DependentUpon>PhongTroDataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="roomForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="roomForm.Designer.cs">
+      <DependentUpon>roomForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="roomOpenForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="roomOpenForm.Designer.cs">
+      <DependentUpon>roomOpenForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ROOMRANGE.cs">
+      <DependentUpon>PhongTroDataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ROOMRANK.cs">
+      <DependentUpon>PhongTroDataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SERVICE.cs">
+      <DependentUpon>PhongTroDataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="serviceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="serviceForm.Designer.cs">
+      <DependentUpon>serviceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>PhongTroDataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagrams_Result.cs">
+      <DependentUpon>PhongTroDataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="STAFF.cs">
+      <DependentUpon>PhongTroDataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="staffForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="staffForm.Designer.cs">
+      <DependentUpon>staffForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="staffOpenForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="staffOpenForm.Designer.cs">
+      <DependentUpon>staffOpenForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagram.cs">
+      <DependentUpon>PhongTroDataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="testForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="testForm.Designer.cs">
+      <DependentUpon>testForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="USER.cs">
+      <DependentUpon>PhongTroDataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="USP_PageCustomer_Result.cs">
+      <DependentUpon>PhongTroDataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="USP_PageRange_Result.cs">
+      <DependentUpon>PhongTroDataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="USP_PageRank_Result.cs">
+      <DependentUpon>PhongTroDataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="USP_PageRentInfo_Result.cs">
+      <DependentUpon>PhongTroDataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="USP_PageRoom_Result.cs">
+      <DependentUpon>PhongTroDataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="USP_PageService_Result.cs">
+      <DependentUpon>PhongTroDataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="USP_PageStaff_Result.cs">
+      <DependentUpon>PhongTroDataBase.tt</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="deleteForm.resx">
+      <DependentUpon>deleteForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="guestForm.resx">
+      <DependentUpon>guestForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="guestOpenForm.resx">
+      <DependentUpon>guestOpenForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="passOpenForm.resx">
+      <DependentUpon>passOpenForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="rangeForm.resx">
+      <DependentUpon>rangeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rankForm.resx">
+      <DependentUpon>rankForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rankOpenForm.resx">
+      <DependentUpon>rankOpenForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="roomForm.resx">
+      <DependentUpon>roomForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="roomOpenForm.resx">
+      <DependentUpon>roomOpenForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="serviceForm.resx">
+      <DependentUpon>serviceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="staffForm.resx">
+      <DependentUpon>staffForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="staffOpenForm.resx">
+      <DependentUpon>staffOpenForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="testForm.resx">
+      <DependentUpon>testForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <EntityDeploy Include="PhongTroDataBase.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>PhongTroDataBase.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="PhongTroDataBase.edmx.diagram">
+      <DependentUpon>PhongTroDataBase.edmx</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="PhongTroDataBase.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>PhongTroDataBase.edmx</DependentUpon>
+      <LastGenOutput>PhongTroDataBase.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="PhongTroDataBase.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>PhongTroDataBase.edmx</DependentUpon>
+      <LastGenOutput>PhongTroDataBase.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
